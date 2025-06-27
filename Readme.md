@@ -1,12 +1,20 @@
-## Problems in Statefull Authentication
+🔐 Authentication
+This app uses JWT-based stateless authentication.
 
-=> If server restart or some reason server lost , all users get logged out.
+📘 Stateful Authentication (Session-based)
+Stores session on server.
 
-=> Memory intensive
+Requires memory and session management.
 
-## Stateless Authentication
+⚠️ Users are logged out if the server restarts.
 
-=> No states
-=> We use JWT(JSON Web Tokens) Tokens 
-=> Maintain the state on local browser using encoded msg of payload(token) and secret key.
-=> Secret should be secret.
+📗 Stateless Authentication (JWT-based)
+No session stored on server.
+
+Uses JSON Web Tokens (JWT) to verify user identity.
+
+Token is stored on client-side (e.g., localStorage or cookie).
+
+✅ Better for scaling and performance.
+
+🔑 Note: JWTs are signed with a secret key. Keep the secret key safe and private.
